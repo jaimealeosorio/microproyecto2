@@ -1,0 +1,4 @@
+kubectl apply -f deployment.yaml
+kubectl expose deployment kubermatic-dl-deployment  --type=LoadBalancer --port 80 --target-port 5000
+kubectl get service
+curl -X POST -F img=@dog.jpg http://20.81.99.69/predict
